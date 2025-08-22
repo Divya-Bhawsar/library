@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Generator</title>
+    <!-- Include JsBarcode library from CDN -->
+    <script src="https://cdn.jsdelivr.net/jsbarcode/3.11.0/JsBarcode.all.min.js"></script>
+    <style>
+        /* Optional styling for the barcode container */
+        #barcode {
+            width: 300px;
+            height: 100px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="barcode"></div>
+
+    <script>
+        // Generate a barcode with value "123456789"
+        JsBarcode("#barcode", "123456789", {
+            format: "CODE128",
+            displayValue: true
+        });
+    </script>
+</body>
+</html>
